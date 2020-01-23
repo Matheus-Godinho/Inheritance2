@@ -27,5 +27,12 @@ public abstract class Taxpayer {
 	}
 	
 	public abstract Double tax();
+	
+	@Override
+	public final String toString() {
+		return getName()
+				+ ": $ "
+				+ String.format("%.2f", tax());
+	}
 
 }

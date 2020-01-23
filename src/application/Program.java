@@ -65,6 +65,17 @@ public class Program {
 					: company(sc, name, annualIncome);
 			taxpayers.add(taxpayer);
 		}
+		
+		System.out.printf("%nTAXES PAID:%n");
+		for (Taxpayer t: taxpayers)
+			System.out.printf("%s%n", t.toString());
+		
+		double totalTaxes;
+		
+		totalTaxes = 0.00;
+		for (Taxpayer t: taxpayers)
+			totalTaxes += t.tax();
+		System.out.printf("%nTOTAL TAXES: $ %.2f%n", totalTaxes);
 
 		sc.close();
 

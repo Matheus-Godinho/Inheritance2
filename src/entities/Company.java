@@ -20,7 +20,7 @@ public final class Company extends Taxpayer {
 	}
 	
 	@Override
-	public Double tax() {
+	public final Double tax() {
 		double taxRate;
 		
 		taxRate = (getNumberOfEmployees() > 10) ? 0.14 : 0.16;

@@ -20,7 +20,7 @@ public final class IndividualTaxpayer extends Taxpayer {
 	}
 	
 	@Override
-	public Double tax() {
+	public final Double tax() {
 		double taxRate;
 		
 		taxRate = (getAnnualIncome() < 20000.00) ? 0.15 : 0.25;
